@@ -82,7 +82,7 @@ const Calculator = () => {
         <button className="number" onClick={() => updateCalc(".")}>
           .
         </button>
-        <button className="number" onClick={() => updateCalc("+")}>
+        <button className="number" onClick={() => updateCalc("0")}>
           0
         </button>
         <button className="operator" onClick={calculate}>
