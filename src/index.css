@@ -1,11 +1,13 @@
 /* ROOT STYLES */
 :root {
-  --primary: rgb(172, 191, 197);
+  --primary: rgba(125, 176, 191);
   --secondary: rgb(6, 60, 64);
   --light: #f5f5f5;
   --dark: #000;
-  --operator: rgb(238, 51, 82);
   --animation: goldenrod;
+  --basic__operator: rgba(52, 69, 74, 0.425);
+  --operator: rgba(237, 22, 58, 0.808);
+  --number: rgba(214, 222, 225, 0.4);
 }
 
 * {
@@ -107,9 +109,19 @@ button:hover {
   margin-top: 1rem;
 }
 
+.clear__btn {
+  flex: 1 1 50%;
+  background-color: var(--operator);
+  border: 1px solid var(--primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.3rem;
+  height: 65px;
+}
+
 .operator {
   flex: 1 1 25%;
-  background-color: var(--operator);
+  background-color: var(--basic__operator);
   border: 1px solid var(--primary);
   font-size: 1.2rem;
   font-weight: 700;
@@ -126,8 +138,8 @@ button:hover {
 .number {
   flex: 1 1 31%;
   max-width: 32.5%;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: var(--number);
+  color: var(--dark);
   border: 1px solid var(--secondary); 
   box-shadow: 0px 2px 64px rgba(220, 209, 209, 0.2);
   font-size: 1.4rem;
