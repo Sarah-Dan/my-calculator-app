@@ -46,19 +46,29 @@ const Calculator = () => {
     setCalc(eval(calc).toString());
   };
 
-  // Clear the calculator output
+  // Delete the last input
   const clear = () => {
+    if (calc === "") {
+      return;
+    }
+    const value = calc.slice(0, -1);
+    setCalc(value);
+  };
+
+  // Clear all the calculator output
+  const clearAll = () => {
     setCalc("");
     setResult("");
   };
 
   return (
     <div className="calculator">
+      {/* display the calculator output */}
       <div className="calculator__display">
         {result ? <span>({result})</span> : ""}
         {calc || "0"}
       </div>
-
+      {/* calculator operators */}
       <div className="operators">
         <button className="operator" onClick={() => updateCalc("+")}>
           +
@@ -72,11 +82,14 @@ const Calculator = () => {
         <button className="operator" onClick={() => updateCalc("/")}>
           /
         </button>
-
         <button className="operator" onClick={clear}>
-          C
+          DEL
+        </button>
+        <button className="operator" onClick={clearAll}>
+          CLEAR
         </button>
       </div>
+      {/* calculator numbers */}
       <div className="numbers">
         {createNumbers()}
         <button className="number" onClick={() => updateCalc(".")}>
@@ -85,7 +98,7 @@ const Calculator = () => {
         <button className="number" onClick={() => updateCalc("0")}>
           0
         </button>
-        <button className="operator" onClick={calculate}>
+        <button id="equal__sign" className="number" onClick={calculate}>
           =
         </button>
       </div>
