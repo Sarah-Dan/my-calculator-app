@@ -70,6 +70,12 @@ const Calculator = () => {
       </div>
       {/* calculator operators */}
       <div className="operators">
+        <button className="clear__btn" onClick={clear}>
+          DEL
+        </button>
+        <button className="clear__btn" onClick={clearAll}>
+          CLEAR
+        </button>
         <button className="operator" onClick={() => updateCalc("+")}>
           +
         </button>
@@ -82,12 +88,7 @@ const Calculator = () => {
         <button className="operator" onClick={() => updateCalc("/")}>
           /
         </button>
-        <button className="operator" onClick={clear}>
-          DEL
-        </button>
-        <button className="operator" onClick={clearAll}>
-          CLEAR
-        </button>
+        
       </div>
       {/* calculator numbers */}
       <div className="numbers">
