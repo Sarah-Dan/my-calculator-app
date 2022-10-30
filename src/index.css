@@ -1,9 +1,10 @@
 /* ROOT STYLES */
 :root {
   --primary: rgba(125, 176, 191);
-  --secondary: rgb(6, 60, 64);
+  --secondary: linear-gradient( to right, #4881c7, #033857);;
   --light: #f5f5f5;
   --dark: #000;
+  --display: rgba(0, 0, 0, 0.183);
   --animation: goldenrod;
   --basic__operator: rgba(52, 69, 74, 0.425);
   --operator: rgba(237, 22, 58, 0.808);
@@ -20,7 +21,7 @@
 }
 
 body {
-  background-color: var(--secondary);
+  background: var(--secondary);
   color: var(--light);
 }
 
@@ -63,12 +64,12 @@ body {
 
 /* CALCULATOR STYLES */
 .calculator {
-  background-color: var(--primary);
+  background-color: transparent;
   color: var(--secondary);
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   overflow: hidden;
-  box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 64px rgba(26, 25, 25, 0.2);
   border-radius: 16px;
   padding: 1rem;
 }
@@ -78,10 +79,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--display);
+  color: var(--light);
   padding: 1rem;
-  border-radius: 5px;
   font-size: 1.5rem;
   word-wrap: break-word;
   word-break: break-all;
@@ -92,7 +92,6 @@ body {
   width: 100%;
   color: var(--light);
   border: none;
-  border-radius: 7px;
   appearance: none;
   outline: none;
   cursor: pointer;
