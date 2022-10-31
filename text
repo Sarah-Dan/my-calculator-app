@@ -1,13 +1,13 @@
  <!--  Clear last digit -->
 
-  const clearLast = () => {
+  <!-- const clearLast = () => {
     if (calc === "") {
       return;
     }
     const value = calc.slice(0, -1);
     setCalc(value);
-  };
+  }; -->
 <!--  -->
-  <button className="operator" onClick={clearLast}>                   
+  <!-- <button className="operator" onClick={clearLast}>                   
     AC
-  </button>
+  </button> -->
